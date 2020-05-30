@@ -10,17 +10,17 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 namespace LibraryAPI.Controllers
 {
     [ApiController]
+    [Route("api/authors")]
     public class AuthorsController : ControllerBase
     {
-        private ICourseLibraryRepository _courseLibraryRepository;
+        private readonly ICourseLibraryRepository _courseLibraryRepository;
 
         public AuthorsController(ICourseLibraryRepository courseLibraryRepository)
         {
             _courseLibraryRepository = courseLibraryRepository ??
-                throw new ArgumentNullException(nameof(courseLibraryRepository));
+                                       throw new ArgumentNullException(nameof(courseLibraryRepository));
         }
-
-        [HttpGet("api/authors")]
+        [HttpGet()]
         public IActionResult GetAuthors()
         {
             var authorsFromRepo = _courseLibraryRepository.GetAuthors();

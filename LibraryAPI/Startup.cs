@@ -29,9 +29,9 @@ namespace CourseLibrary.API
 
             services.AddDbContext<CourseLibraryContext>(options =>
             {
-                String dataBase = Environment.GetEnvironmentVariable("API_DB");
-                String dataBasePassword = Environment.GetEnvironmentVariable("API_PASS_DB");
-                String dataBaseUser = Environment.GetEnvironmentVariable("API_USER_DB");
+                String dataBase = System.Environment.GetEnvironmentVariable("API_DB");
+                String dataBasePassword = System.Environment.GetEnvironmentVariable("API_PASS_DB");
+                String dataBaseUser = System.Environment.GetEnvironmentVariable("API_USER_DB");
 
                 options.UseSqlServer(
                     @"Server=localhost;Database=" + dataBase + ";Trusted_Connection=True;User Id=" + dataBaseUser + ";Password=" + dataBasePassword);
