@@ -1,3 +1,4 @@
+using AutoMapper;
 using CourseLibrary.API.DbContexts;
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Builder;
@@ -31,6 +32,8 @@ namespace CourseLibrary.API
             }).AddXmlDataContractSerializerFormatters();
 
             services.AddScoped<ICourseLibraryRepository, CourseLibraryRepository>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddDbContext<CourseLibraryContext>(options =>
             {
