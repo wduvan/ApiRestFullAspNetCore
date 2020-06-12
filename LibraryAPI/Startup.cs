@@ -1,6 +1,6 @@
 using AutoMapper;
-using CourseLibrary.API.DbContexts;
-using CourseLibrary.API.Services;
+using LibraryAPI.DbContexts;
+using LibraryAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 
-namespace CourseLibrary.API
+namespace LibraryAPI
 {
     public class Startup
     {
