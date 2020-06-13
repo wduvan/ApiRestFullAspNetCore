@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace LibraryAPI.Services
 {
     public interface ICourseLibraryRepository
-    {    
+    {
         IEnumerable<Course> GetCourses(Guid authorId);
         Course GetCourse(Guid authorId, Guid courseId);
         void AddCourse(Guid authorId, Course course);
@@ -14,7 +14,7 @@ namespace LibraryAPI.Services
         IEnumerable<Author> GetAuthors();
         Author GetAuthor(Guid authorId);
 
-        public IEnumerable<Author> GetAuthors(string mainCategory);
+        public IEnumerable<Author> GetAuthors(string mainCategory, string searchQuery);
         IEnumerable<Author> GetAuthors(IEnumerable<Guid> authorIds);
         void AddAuthor(Author author);
         void DeleteAuthor(Author author);
