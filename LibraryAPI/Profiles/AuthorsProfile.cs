@@ -11,7 +11,7 @@ namespace LibraryAPI.Profiles
     {
         public AuthorsProfile()
         {
-            CreateMap<CourseLibrary.API.Entities.Author, Models.AuthorDto>()
+            CreateMap<Entities.Author, Models.AuthorDto>()
                 .ForMember(
                 dest => dest.Name,
                 opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))

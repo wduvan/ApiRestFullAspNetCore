@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using CourseLibrary.API.Services;
+using LibraryAPI.Services;
 using LibraryAPI.Helpers;
 using LibraryAPI.Models;
 using Microsoft.AspNetCore.Http;
