@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using LibraryAPI.ResourceParameters;
-using LibraryAPI.models;
+using LibraryAPI.Models;
 
 namespace LibraryAPI.Controllers
 {
